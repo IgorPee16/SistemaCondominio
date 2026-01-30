@@ -1,0 +1,75 @@
+{
+  "name": "ServiceProvider",
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string"
+    },
+    "contact_name": {
+      "type": "string"
+    },
+    "service_type": {
+      "type": "string",
+      "enum": [
+        "elevator",
+        "fire_system",
+        "pest_control",
+        "pool",
+        "generator",
+        "electrical",
+        "plumbing",
+        "cleaning",
+        "security",
+        "landscaping",
+        "other"
+      ]
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "cnpj": {
+      "type": "string"
+    },
+    "contract_start": {
+      "type": "string",
+      "format": "date"
+    },
+    "contract_end": {
+      "type": "string",
+      "format": "date"
+    },
+    "contract_value": {
+      "type": "number"
+    },
+    "payment_frequency": {
+      "type": "string",
+      "enum": [
+        "monthly",
+        "quarterly",
+        "annual",
+        "per_service"
+      ],
+      "default": "monthly"
+    },
+    "contract_url": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "rating": {
+      "type": "number"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "company_name",
+    "service_type"
+  ]
+}

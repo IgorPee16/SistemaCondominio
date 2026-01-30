@@ -1,0 +1,77 @@
+{
+  "name": "Announcement",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "notice",
+        "alert",
+        "event",
+        "maintenance",
+        "general"
+      ],
+      "default": "general"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "normal",
+        "high"
+      ],
+      "default": "normal"
+    },
+    "target_blocks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Blocos espec\u00edficos ou vazio para todos"
+    },
+    "target_units": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "publish_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "expiry_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "read_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_pinned": {
+      "type": "boolean",
+      "default": false
+    },
+    "send_notification": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}

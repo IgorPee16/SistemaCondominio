@@ -1,0 +1,89 @@
+{
+  "name": "Occurrence",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "maintenance",
+        "complaint",
+        "suggestion",
+        "noise",
+        "parking",
+        "security",
+        "cleaning",
+        "other"
+      ],
+      "description": "Tipo de ocorr\u00eancia"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "urgent"
+      ],
+      "default": "medium"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "in_progress",
+        "waiting",
+        "resolved",
+        "cancelled"
+      ],
+      "default": "open"
+    },
+    "location": {
+      "type": "string",
+      "description": "Local da ocorr\u00eancia"
+    },
+    "unit_id": {
+      "type": "string"
+    },
+    "unit_display": {
+      "type": "string"
+    },
+    "reported_by": {
+      "type": "string"
+    },
+    "reporter_name": {
+      "type": "string"
+    },
+    "assigned_to": {
+      "type": "string"
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "resolution_notes": {
+      "type": "string"
+    },
+    "resolved_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "estimated_cost": {
+      "type": "number"
+    },
+    "actual_cost": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "title",
+    "type"
+  ]
+}

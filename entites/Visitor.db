@@ -1,0 +1,70 @@
+{
+  "name": "Visitor",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "document": {
+      "type": "string",
+      "description": "RG ou CPF"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "visitor",
+        "delivery",
+        "service_provider",
+        "food_delivery"
+      ],
+      "default": "visitor"
+    },
+    "unit_id": {
+      "type": "string"
+    },
+    "unit_display": {
+      "type": "string"
+    },
+    "authorized_by": {
+      "type": "string"
+    },
+    "authorizer_name": {
+      "type": "string"
+    },
+    "entry_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "exit_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "vehicle_plate": {
+      "type": "string"
+    },
+    "photo_url": {
+      "type": "string"
+    },
+    "is_recurring": {
+      "type": "boolean",
+      "default": false
+    },
+    "valid_until": {
+      "type": "string",
+      "format": "date"
+    },
+    "qr_code": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "unit_id"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "name": "FinancialTransaction",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "income",
+        "expense"
+      ],
+      "description": "Receita ou Despesa"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "condo_fee",
+        "fine",
+        "extra_fee",
+        "reservation",
+        "water",
+        "electricity",
+        "gas",
+        "maintenance",
+        "cleaning",
+        "security",
+        "elevator",
+        "garden",
+        "insurance",
+        "administrative",
+        "personnel",
+        "other"
+      ],
+      "description": "Categoria"
+    },
+    "description": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "payment_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "paid",
+        "overdue",
+        "cancelled"
+      ],
+      "default": "pending"
+    },
+    "unit_id": {
+      "type": "string"
+    },
+    "unit_display": {
+      "type": "string"
+    },
+    "resident_id": {
+      "type": "string"
+    },
+    "resident_name": {
+      "type": "string"
+    },
+    "reference_month": {
+      "type": "string",
+      "description": "M\u00eas de refer\u00eancia (YYYY-MM)"
+    },
+    "invoice_url": {
+      "type": "string"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "boleto",
+        "pix",
+        "transfer",
+        "cash",
+        "credit_card"
+      ]
+    },
+    "late_fee": {
+      "type": "number"
+    },
+    "interest": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "type",
+    "category",
+    "amount"
+  ]
+}

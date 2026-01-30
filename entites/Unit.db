@@ -1,0 +1,58 @@
+{
+  "name": "Unit",
+  "type": "object",
+  "properties": {
+    "block": {
+      "type": "string",
+      "description": "Bloco/Torre"
+    },
+    "number": {
+      "type": "string",
+      "description": "N\u00famero da unidade"
+    },
+    "floor": {
+      "type": "number",
+      "description": "Andar"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "apartment",
+        "house",
+        "commercial"
+      ],
+      "description": "Tipo de unidade"
+    },
+    "area_sqm": {
+      "type": "number",
+      "description": "\u00c1rea em m\u00b2"
+    },
+    "ideal_fraction": {
+      "type": "number",
+      "description": "Fra\u00e7\u00e3o ideal"
+    },
+    "parking_spots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "owner_id": {
+      "type": "string",
+      "description": "ID do propriet\u00e1rio"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "occupied",
+        "vacant",
+        "rented"
+      ],
+      "default": "occupied"
+    }
+  },
+  "required": [
+    "block",
+    "number"
+  ]
+}

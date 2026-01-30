@@ -1,0 +1,66 @@
+{
+  "name": "Reservation",
+  "type": "object",
+  "properties": {
+    "area_name": {
+      "type": "string"
+    },
+    "unit_id": {
+      "type": "string"
+    },
+    "unit_display": {
+      "type": "string"
+    },
+    "resident_id": {
+      "type": "string"
+    },
+    "resident_name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "start_time": {
+      "type": "string"
+    },
+    "end_time": {
+      "type": "string"
+    },
+    "guests_count": {
+      "type": "number"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "cancelled",
+        "completed"
+      ],
+      "default": "pending"
+    },
+    "fee_amount": {
+      "type": "number"
+    },
+    "fee_paid": {
+      "type": "boolean",
+      "default": false
+    },
+    "notes": {
+      "type": "string"
+    },
+    "rejection_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "area_name",
+    "unit_id",
+    "date"
+  ]
+}

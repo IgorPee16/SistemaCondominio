@@ -1,0 +1,76 @@
+{
+  "name": "Assembly",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "ordinary",
+        "extraordinary"
+      ],
+      "default": "ordinary"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "location": {
+      "type": "string"
+    },
+    "is_online": {
+      "type": "boolean",
+      "default": false
+    },
+    "meeting_link": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "scheduled",
+        "in_progress",
+        "finished",
+        "cancelled"
+      ],
+      "default": "scheduled"
+    },
+    "agenda": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "order": {
+            "type": "number"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "minutes_url": {
+      "type": "string",
+      "description": "URL da ata"
+    },
+    "quorum_required": {
+      "type": "number"
+    },
+    "attendees_count": {
+      "type": "number"
+    },
+    "convocation_sent": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "title",
+    "date"
+  ]
+}

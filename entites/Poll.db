@@ -1,0 +1,57 @@
+{
+  "name": "Poll",
+  "type": "object",
+  "properties": {
+    "question": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "votes": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "voters": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs de quem j\u00e1 votou"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "closed"
+      ],
+      "default": "active"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "allow_multiple": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_anonymous": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "question",
+    "options"
+  ]
+}

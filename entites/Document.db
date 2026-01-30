@@ -1,0 +1,60 @@
+{
+  "name": "Document",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "minutes",
+        "contract",
+        "invoice",
+        "balance_sheet",
+        "regulation",
+        "convention",
+        "report",
+        "other"
+      ],
+      "description": "Categoria do documento"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "file_type": {
+      "type": "string"
+    },
+    "file_size": {
+      "type": "number"
+    },
+    "reference_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "reference_month": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_public": {
+      "type": "boolean",
+      "default": true,
+      "description": "Vis\u00edvel para todos moradores"
+    },
+    "uploaded_by": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "file_url"
+  ]
+}

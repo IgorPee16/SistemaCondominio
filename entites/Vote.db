@@ -1,0 +1,71 @@
+{
+  "name": "Vote",
+  "type": "object",
+  "properties": {
+    "assembly_id": {
+      "type": "string"
+    },
+    "topic": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "open",
+        "closed"
+      ],
+      "default": "pending"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "votes": {
+            "type": "number"
+          },
+          "fraction_votes": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "votes_cast": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "unit_id": {
+            "type": "string"
+          },
+          "option": {
+            "type": "string"
+          },
+          "fraction": {
+            "type": "number"
+          },
+          "timestamp": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "result": {
+      "type": "string"
+    },
+    "use_fraction_weight": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "topic"
+  ]
+}

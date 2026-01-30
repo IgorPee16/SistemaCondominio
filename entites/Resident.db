@@ -1,0 +1,97 @@
+{
+  "name": "Resident",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "cpf": {
+      "type": "string"
+    },
+    "unit_id": {
+      "type": "string"
+    },
+    "unit_display": {
+      "type": "string",
+      "description": "Bloco + N\u00famero para exibi\u00e7\u00e3o"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "owner",
+        "tenant",
+        "dependent"
+      ],
+      "default": "owner"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "syndic",
+        "sub_syndic",
+        "counselor",
+        "resident"
+      ],
+      "default": "resident"
+    },
+    "photo_url": {
+      "type": "string"
+    },
+    "move_in_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "move_out_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "pets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "species": {
+            "type": "string"
+          },
+          "breed": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "vehicles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "plate": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "unit_id"
+  ]
+}

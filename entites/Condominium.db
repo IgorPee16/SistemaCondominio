@@ -1,0 +1,66 @@
+{
+  "name": "Condominium",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome do condom\u00ednio"
+    },
+    "address": {
+      "type": "string",
+      "description": "Endere\u00e7o completo"
+    },
+    "cnpj": {
+      "type": "string",
+      "description": "CNPJ do condom\u00ednio"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zip_code": {
+      "type": "string"
+    },
+    "total_units": {
+      "type": "number"
+    },
+    "total_blocks": {
+      "type": "number"
+    },
+    "common_areas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "capacity": {
+            "type": "number"
+          },
+          "rules": {
+            "type": "string"
+          },
+          "reservation_fee": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "regulation_url": {
+      "type": "string"
+    },
+    "convention_url": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "address"
+  ]
+}
